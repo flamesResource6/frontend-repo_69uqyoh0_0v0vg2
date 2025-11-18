@@ -70,8 +70,15 @@ function Card({ project }) {
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
       href={project.link || '#'}
-      className="group block rounded-2xl bg-white border border-orange-100 hover:border-orange-200 shadow-sm hover:shadow-md p-5"
+      className="group block rounded-2xl bg-white border border-orange-100 hover:border-orange-200 shadow-sm hover:shadow-md p-5 relative overflow-hidden"
     >
+      {/* light hover gradient to brighten cards */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileHover={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/0 via-amber-50/40 to-orange-50/80"
+      />
       <div className="aspect-video w-full rounded-xl bg-gradient-to-br from-orange-50 to-white border border-orange-100 mb-4 overflow-hidden">
         {project.image ? (
           <img src={project.image} alt="" className="w-full h-full object-cover" />

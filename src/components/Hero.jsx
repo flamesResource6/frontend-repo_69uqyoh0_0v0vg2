@@ -1,5 +1,6 @@
 import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import { FloatingPaw } from './Effects'
 
 export default function Hero() {
   return (
@@ -20,8 +21,9 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="bg-white/80 backdrop-blur rounded-3xl border border-orange-100 shadow-xl p-6 sm:p-10"
+          className="bg-white/80 backdrop-blur rounded-3xl border border-orange-100 shadow-xl p-6 sm:p-10 relative"
         >
+          <FloatingPaw />
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
             <div className="flex-1">
               <div className="inline-flex items-center gap-2 text-orange-700 bg-orange-50 border border-orange-100 px-3 py-1 rounded-full mb-3">
