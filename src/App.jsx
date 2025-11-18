@@ -4,12 +4,13 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Blog from './components/Blog'
 import Contact from './components/Contact'
-import { ScrollProgress, MouseGlow } from './components/Effects'
+import { ScrollProgress, MouseGlow, PawScamperLayer } from './components/Effects'
 
 function App() {
   return (
     <div className="min-h-screen bg-white text-orange-900 relative">
       <ScrollProgress />
+      <PawScamperLayer />
       <MouseGlow />
       <Navbar />
       <Hero />
